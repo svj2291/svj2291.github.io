@@ -10,33 +10,50 @@ export default class IndexPage extends React.Component {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            <h1 className="has-text-weight-bold is-size-2">SVJ 2291</h1>
+
+Kontakty
+
+Základní kontaktní e-mail: ​info@svj2291.cz
+
+Výbor: vybor@svj2291.cz
+
+Členové: clenove@svj2291.cz
+
+Vchod A: vchod.a@svj2291.cz​
+Vchod B: vchod.b@svj2291.cz​
+Vchod C: vchod.c@svj2291.cz​
+
+Garáže: garaze@svj2291.cz​
+
+Servisní (havarijní) telefon: ​ +420-326-550-160​
+
+​Ostatní
+
+Správce domu (p. Baštecký): sprava.domu​@svj2291.cz​​
+
+​Účetnictví (DomyServis​): ​ucetnictvi@svj2291.cz​​
+
+Společenství vlastníků V Uličce 2291
+
+Sídlo:
+
+V Uličce 2291
+Brandýs nad Labem
+250 01 Brandýs nad Labem-Stará Boleslav
+
+Identifikační číslo: 03017290
+
+Spisová značka: S 15485 vedená u Městského soudu v Praze​
+
+Výbor:
+
+JAROSLAV URBÁNEK, předseda, +420777007070
+JAN VÁCLAV KAŠPAR, místopředseda
+TOMÁŠ DOLEŽIL, člen výboru
+Kontaktní e-mail na členy výboru: vybor@svj2291.cz​
+
           </div>
-          {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
         </div>
       </section>
     )
